@@ -1,12 +1,8 @@
 <template>
-    <div>
-        <Demo01Card />
-        <Demo01Card2 />
-    </div>
+  <Demo01Card />
+  <Demo01Card2 />
 </template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>
