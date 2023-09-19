@@ -4,5 +4,6 @@
         "pinia",
         "vuetify",
         "vueuse"
-    ]
+    ],
+    "nuxt.isNuxtApp": false
 }
