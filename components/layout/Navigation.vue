@@ -10,13 +10,7 @@
 
     <v-divider />
 
-    <v-list
-      v-model:opened="open"
-      color="primary"
-      density="compact"
-      variant="plain"
-      :lines="false"
-      nav>
+    <v-list v-model:opened="open" color="primary" density="compact" variant="plain" :lines="false" nav>
       <v-list-item prepend-icon="mdi-home" title="Home" value="/" to="/"></v-list-item>
 
       <v-list-group fluid value="Users">

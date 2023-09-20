@@ -1,11 +1,5 @@
 <template>
-  <v-card
-    class="mx-auto"
-    color="#36393f"
-    max-width="650"
-    min-height="350"
-    theme="dark"
-    variant="flat">
+  <v-card class="mx-auto" color="#36393f" max-width="650" min-height="350" theme="dark" variant="flat">
     <v-sheet color="#202225">
       <v-card-item>
         <template v-slot:prepend>
@@ -18,13 +12,7 @@
 
         <v-divider vertical class="mx-2"></v-divider>
 
-        <v-btn
-          class="text-none text-subtitle-1"
-          color="#5865f2"
-          size="small"
-          variant="flat">
-          Create Event
-        </v-btn>
+        <v-btn class="text-none text-subtitle-1" color="#5865f2" size="small" variant="flat"> Create Event </v-btn>
 
         <template v-slot:append>
           <v-btn icon="$close" size="large" variant="text"></v-btn>
@@ -37,15 +25,11 @@
         <v-card-title class="text-body-2 d-flex align-center">
           <v-icon color="#949cf7" icon="mdi-calendar" start></v-icon>
 
-          <span class="text-medium-emphasis font-weight-bold"
-            >1 Fri Dec 16th - 9:00 PM</span
-          >
+          <span class="text-medium-emphasis font-weight-bold">1 Fri Dec 16th - 9:00 PM</span>
 
           <v-spacer></v-spacer>
 
-          <v-avatar
-            image="https://cdn.vuetifyjs.com/images/john-smirk.png"
-            size="x-small"></v-avatar>
+          <v-avatar image="https://cdn.vuetifyjs.com/images/john-smirk.png" size="x-small"></v-avatar>
 
           <v-chip
             class="ms-2 text-medium-emphasis"
@@ -70,30 +54,17 @@
       <div class="pa-4 d-flex align-center">
         <v-icon color="disabled" icon="mdi-broadcast" start></v-icon>
 
-        <v-icon
-          color="#949cf7"
-          icon="mdi-video-vintage"
-          size="x-small"></v-icon>
+        <v-icon color="#949cf7" icon="mdi-video-vintage" size="x-small"></v-icon>
 
-        <span class="text-caption text-medium-emphasis ms-1 font-weight-light">
-          streaming
-        </span>
+        <span class="text-caption text-medium-emphasis ms-1 font-weight-light"> streaming </span>
 
         <v-spacer></v-spacer>
 
         <v-btn icon="mdi-dots-horizontal" variant="text"></v-btn>
 
-        <v-btn
-          class="me-2 text-none"
-          color="#4f545c"
-          prepend-icon="mdi-export-variant"
-          variant="flat">
-          Share
-        </v-btn>
+        <v-btn class="me-2 text-none" color="#4f545c" prepend-icon="mdi-export-variant" variant="flat"> Share </v-btn>
 
-        <v-btn border class="text-none" prepend-icon="mdi-check" variant="text">
-          Interested
-        </v-btn>
+        <v-btn border class="text-none" prepend-icon="mdi-check" variant="text"> Interested </v-btn>
       </div>
     </v-card>
   </v-card>

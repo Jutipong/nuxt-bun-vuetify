@@ -17,7 +17,8 @@
                 <v-list-item-title :title="`Message ${n}`"></v-list-item-title>
 
                 <v-list-item-subtitle
-                  title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil repellendus distinctio similique"></v-list-item-subtitle>
+                  title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil repellendus distinctio similique">
+                </v-list-item-subtitle>
               </v-list-item>
 
               <v-divider v-if="n !== 6" :key="`divider-${n}`" inset></v-divider>
