@@ -2,6 +2,9 @@ import { LightTheme } from './theme/config';
 
 export default defineNuxtConfig({
   ssr: false,
+  typescript: {
+    shim: false,
+  },
   devtools: {
     enabled: true,
   },

@@ -1,5 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <Demo03Props03 :msg="3" />
+  <div>
+    <slot></slot>
+  </div>
 </template>
