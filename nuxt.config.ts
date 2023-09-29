@@ -21,5 +21,11 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ['@pinia/nuxt', '@invictus.codes/nuxt-vuetify', '@vueuse/nuxt', '@vue-macros/nuxt'],
+  modules: [
+    '@pinia/nuxt',
+    '@invictus.codes/nuxt-vuetify',
+    '@vueuse/nuxt',
+    '@vue-macros/nuxt',
+    '@nuxtjs/tailwindcss',
+  ],
 });
