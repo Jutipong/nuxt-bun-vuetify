@@ -1,5 +1,3 @@
-<script lang="ts" setup></script>
-
 <template>
-  <Demo03Props03 :msg="3" />
+  <SharedCounter />
 </template>
