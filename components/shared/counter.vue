@@ -1,10 +1,13 @@
 <script setup lang="ts">
-const { counter, increment, decrement } = useGlobal();
+import { useCounterStore } from '~/stores/counter';
+
+// const { counter, increment, decrement } = useGlobal();
+const { state, increment, decrement } = useCounterStore();
 </script>
 
 <template>
   <div>
-    Counter: {{ counter }}
+    Counter: {{ state.counter }}
     <button @click="increment()">+</button>
     <button @click="decrement()">-</button>
   </div>
