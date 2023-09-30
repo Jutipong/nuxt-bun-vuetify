@@ -1,19 +1,18 @@
 import { defineStore, acceptHMRUpdate } from 'pinia';
-import { useLocalStorage } from '@vueuse/core';
 
 export const useCounterStore = defineStore('counter', () => {
-  const state = ref({ counter: 0 });
-  //    const state={ user: useLocalStorage('pinia/auth/login', 'bob') };
+	const state = ref({ counter: 0 });
+	//    const state={ user: useLocalStorage('pinia/auth/login', 'bob') };
 
-  function increment() {
-    state.value.counter++;
-  }
+	function increment() {
+		state.value.counter++;
+	}
 
-  function decrement() {
-    state.value.counter--;
-  }
+	function decrement() {
+		state.value.counter--;
+	}
 
-  return { state, increment, decrement };
+	return { state, increment, decrement };
 });
 
 // if (import.meta.hot) {
