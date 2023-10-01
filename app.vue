@@ -1,6 +1,6 @@
 <template>
-  <NuxtLayout>
-    <NuxtLoadingIndicator :duration="9000" :throttle="9000" :color="'error'" :height="500" />
-    <NuxtPage />
-  </NuxtLayout>
+	<NuxtLayout>
+		<NuxtLoadingIndicator :duration="9000" />
+		<NuxtPage />
+	</NuxtLayout>
 </template>

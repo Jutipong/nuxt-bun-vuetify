@@ -4,6 +4,5 @@
     "printWidth": 90,
     "bracketSameLine": true,
     "useTabs":true,
-    "vueIndentScriptAndStyle":true,
-    "singleAttributePerLine":true
+    "vueIndentScriptAndStyle":true
 }

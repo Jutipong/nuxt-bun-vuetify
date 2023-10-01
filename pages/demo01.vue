@@ -1,19 +1,18 @@
+<script setup lang="ts">
+	const cards = ['Today', 'Yesterday'];
+</script>
+
 <template>
 	<div>
 		<!-- <Demo01Card />
   <Demo01Card2 /> -->
 		<v-row>
-			<v-col
-				v-for="card in cards"
-				:key="card"
-				cols="12">
+			<v-col v-for="card in cards" :key="card" cols="12">
 				<v-card>
 					<v-list lines="two">
 						<v-list-subheader :title="card"></v-list-subheader>
 
-						<template
-							v-for="n in 6"
-							:key="n">
+						<template v-for="n in 6" :key="n">
 							<v-list-item>
 								<template v-slot:prepend>
 									<v-avatar color="grey-darken-1"></v-avatar>
@@ -26,10 +25,7 @@
 								</v-list-item-subtitle>
 							</v-list-item>
 
-							<v-divider
-								v-if="n !== 6"
-								:key="`divider-${n}`"
-								inset></v-divider>
+							<v-divider v-if="n !== 6" :key="`divider-${n}`" inset></v-divider>
 						</template>
 					</v-list>
 				</v-card>
@@ -37,9 +33,3 @@
 		</v-row>
 	</div>
 </template>
-
-<script setup lang="ts">
-	const cards = ['Today', 'Yesterday'];
-</script>
-
-<style scoped></style>

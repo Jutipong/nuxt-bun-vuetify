@@ -15,6 +15,6 @@ export const useCounterStore = defineStore('counter', () => {
 	return { state, increment, decrement };
 });
 
-// if (import.meta.hot) {
-//   import.meta.hot.accept(acceptHMRUpdate(useCounterStore, import.meta.hot));
-// }
+if (import.meta.hot) {
+	import.meta.hot.accept(acceptHMRUpdate(useCounterStore, import.meta.hot));
+}

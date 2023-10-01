@@ -1,7 +1,7 @@
+<script setup lang="ts"></script>
+
 <template>
 	<div>
-		<SharedCounter />
-
 		<v-card
 			class="mx-auto"
 			color="#36393f"
@@ -13,17 +13,13 @@
 				<v-card-item>
 					<template v-slot:prepend>
 						<v-card-title>
-							<v-icon
-								icon="mdi-calendar"
-								start></v-icon>
+							<v-icon icon="mdi-calendar" start></v-icon>
 
 							1 Event
 						</v-card-title>
 					</template>
 
-					<v-divider
-						vertical
-						class="mx-2"></v-divider>
+					<v-divider vertical class="mx-2"></v-divider>
 
 					<v-btn
 						class="text-none text-subtitle-1"
@@ -34,25 +30,15 @@
 					</v-btn>
 
 					<template v-slot:append>
-						<v-btn
-							icon="$close"
-							size="large"
-							variant="text"></v-btn>
+						<v-btn icon="$close" size="large" variant="text"></v-btn>
 					</template>
 				</v-card-item>
 			</v-sheet>
 
-			<v-card
-				class="ma-4"
-				color="#2f3136"
-				rounded="lg"
-				variant="flat">
+			<v-card class="ma-4" color="#2f3136" rounded="lg" variant="flat">
 				<v-card-item>
 					<v-card-title class="text-body-2 d-flex align-center">
-						<v-icon
-							color="#949cf7"
-							icon="mdi-calendar"
-							start></v-icon>
+						<v-icon color="#949cf7" icon="mdi-calendar" start></v-icon>
 
 						<span class="text-medium-emphasis font-weight-bold"
 							>1 Fri Dec 16th - 9:00 PM</span
@@ -85,15 +71,9 @@
 				<v-divider></v-divider>
 
 				<div class="pa-4 d-flex align-center">
-					<v-icon
-						color="disabled"
-						icon="mdi-broadcast"
-						start></v-icon>
+					<v-icon color="disabled" icon="mdi-broadcast" start></v-icon>
 
-					<v-icon
-						color="#949cf7"
-						icon="mdi-video-vintage"
-						size="x-small"></v-icon>
+					<v-icon color="#949cf7" icon="mdi-video-vintage" size="x-small"></v-icon>
 
 					<span class="text-caption text-medium-emphasis ms-1 font-weight-light">
 						streaming
@@ -101,9 +81,7 @@
 
 					<v-spacer></v-spacer>
 
-					<v-btn
-						icon="mdi-dots-horizontal"
-						variant="text"></v-btn>
+					<v-btn icon="mdi-dots-horizontal" variant="text"></v-btn>
 
 					<v-btn
 						class="me-2 text-none"
@@ -113,11 +91,7 @@
 						Share
 					</v-btn>
 
-					<v-btn
-						border
-						class="text-none"
-						prepend-icon="mdi-check"
-						variant="text">
+					<v-btn border class="text-none" prepend-icon="mdi-check" variant="text">
 						Interested
 					</v-btn>
 				</div>
@@ -125,10 +99,3 @@
 		</v-card>
 	</div>
 </template>
-
-<script setup lang="ts">
-	// This will work in both `<script setup>` and `<script>`
-	// definePageMeta({
-	//   layout: 'custom',
-	// });
-</script>
