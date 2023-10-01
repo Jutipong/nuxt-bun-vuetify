@@ -1,17 +1,17 @@
 export const useGlobal = () => {
-  const counter = useState('globalState', () => 0);
+	const counter = useState('globalState', () => 0);
 
-  function increment() {
-    counter.value++;
-  }
+	function increment() {
+		counter.value++;
+	}
 
-  function decrement() {
-    counter.value--;
-  }
+	function decrement() {
+		counter.value--;
+	}
 
-  return {
-    counter,
-    increment,
-    decrement,
-  };
+	return {
+		counter,
+		increment,
+		decrement,
+	};
 };

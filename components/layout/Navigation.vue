@@ -11,7 +11,6 @@
 </script>
 
 <template>
-	<!-- rail -->
 	<v-navigation-drawer
 		elevation="2"
 		expand-on-hover
@@ -28,12 +27,12 @@
 		<v-divider />
 
 		<v-list
-			v-model:opened="open"
 			color="primary"
 			density="compact"
 			variant="plain"
+			nav
 			:lines="false"
-			nav>
+			v-model:opened="open">
 			<v-list-item prepend-icon="mdi-home" title="Home" value="/" to="/"></v-list-item>
 
 			<v-list-group value="Users">
