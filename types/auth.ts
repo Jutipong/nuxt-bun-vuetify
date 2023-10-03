@@ -1,10 +1,4 @@
-export interface IAuth {
-	username: string;
-	password: string;
-	visible: boolean;
-}
-
-export interface IUserLogin {
+type UserLogin = {
 	id: number;
 	username: string;
 	email: string;
@@ -12,4 +6,7 @@ export interface IUserLogin {
 	lastName: string;
 	gender: string;
 	image: string;
-}
+	token: string;
+};
+
+export type { Auth, UserLogin };

@@ -1,17 +1,19 @@
 import { defineStore } from 'pinia';
+import { UserLogin } from '~/types/auth';
 
 export const useAuthStore = defineStore('auth', () => {
+	const router = useRouter();
 	const state = reactive({ loading: false });
 	const user_login = 'user_login';
 
-	async function logIn(payload: IAuth) {
-		const { data }: any = await useFetch<IUserLogin>('https://dummyjson.com/auth/login', {
+	async function logIn(username: string, password: string) {
+		state.loading = true;
+
+		const { data }: any = await useFetch<UserLogin>('https://dummyjson.com/auth/login', {
 			method: 'post',
 			headers: { 'Content-Type': 'application/json' },
-			body: payload,
+			body: { username, password },
 		});
-
-		state.loading = true;
 
 		if (data.value) {
 			sessionStorage.setItem(user_login, JSON.stringify(data.value));
@@ -19,40 +21,45 @@ export const useAuthStore = defineStore('auth', () => {
 			const timeout = setTimeout(() => {
 				clearTimeout(timeout);
 				state.loading = false;
-				navigateTo('/');
+				// navigateTo('/');
+				router.replace('/');
 			}, 4000);
+		} else {
+			state.loading = false;
 		}
 	}
 
-	function logOut() {
-		sessionStorage.removeItem(user_login);
-		navigateTo('/login');
+	function logOut(): void {
+		const timeout = setTimeout(() => {
+			sessionStorage.removeItem(user_login);
+			clearTimeout(timeout);
+		}, 200);
+		router.replace('/login');
 	}
 
-	function _getUserInfo(): IUserLogin {
+	function _getUserInfo(): UserLogin | null {
 		const userLoin = sessionStorage.getItem(user_login);
-		if (!userLoin) {
-			navigateTo('/login');
-			return null;
-		}
+		if (!userLoin) return null;
 
-		const user: IUserLogin = JSON.parse(userLoin);
+		const user: UserLogin = JSON.parse(userLoin);
 		return user;
 	}
 
 	function isLogin(): boolean {
-		const result = _getUserInfo() ? true : false;
-		return result;
+		let userInfo = _getUserInfo();
+		return userInfo ? true : false;
 	}
 
-	function getUserInfo(): IUserLogin {
-		const userInfo = _getUserInfo();
+	function getUserInfo(): UserLogin {
+		const userInfo = _getUserInfo()!;
 		return userInfo;
 	}
 
-	function getToken(): string {
-		const { token }: IUserLogin = _getUserInfo();
-		return token;
+	function getToken(): string | null {
+		const userInfo = _getUserInfo();
+		if (!userInfo) return null;
+
+		return userInfo.token;
 	}
 
 	return {

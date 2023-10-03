@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 		shim: false,
 	},
 	devtools: {
-		enabled: true,
+		enabled: false,
 	},
 	app: {
 		pageTransition: { name: 'page', mode: 'out-in' },

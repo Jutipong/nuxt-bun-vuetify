@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const authStore = useAuthStore();
+const { logOut } = useAuthStore();
 const open = ref(['Users']);
 const isRail = ref(true);
 
@@ -74,7 +74,7 @@ const cruds2 = [['Demo03', 'mdi-chevron-right', '/demo03']];
 
 		<template v-slot:append>
 			<div class="pa-2">
-				<v-btn block color="red" @click="authStore.logOut()">
+				<v-btn block color="red" @click="logOut()">
 					{{ isRail ? '' : 'Logout' }} <v-icon>mdi-logout</v-icon>
 				</v-btn>
 			</div>
