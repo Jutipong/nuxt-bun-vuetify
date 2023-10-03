@@ -1,9 +1,6 @@
 <template>
 	<v-row>
-		<v-card
-			:loading="loading"
-			class="mx-auto my-12"
-			max-width="374">
+		<v-card :loading="loading" class="mx-auto my-12" max-width="374">
 			<template v-slot:loader="{ isActive }">
 				<v-progress-linear
 					:active="isActive"
@@ -23,17 +20,12 @@
 				<v-card-subtitle>
 					<span class="me-1">Local Favorite</span>
 
-					<v-icon
-						color="error"
-						icon="mdi-fire-circle"
-						size="small"></v-icon>
+					<v-icon color="error" icon="mdi-fire-circle" size="small"></v-icon>
 				</v-card-subtitle>
 			</v-card-item>
 
 			<v-card-text>
-				<v-row
-					align="center"
-					class="mx-0">
+				<v-row align="center" class="mx-0">
 					<v-rating
 						:model-value="4.5"
 						color="amber"
@@ -70,10 +62,7 @@
 			</div>
 
 			<v-card-actions>
-				<v-btn
-					color="deep-purple-lighten-2"
-					variant="text"
-					@click="reserve">
+				<v-btn color="deep-purple-lighten-2" variant="text" @click="reserve">
 					Reserve
 				</v-btn>
 			</v-card-actions>
@@ -82,12 +71,12 @@
 </template>
 
 <script setup lang="ts">
-	const loading = ref(false);
-	const selection = ref(1);
-	function reserve() {
-		loading.value = true;
-		setTimeout(() => (loading.value = false), 2000);
-	}
+const loading = ref(false);
+const selection = ref(1);
+function reserve() {
+	loading.value = true;
+	setTimeout(() => (loading.value = false), 2000);
+}
 </script>
 
 <style scoped></style>

@@ -1,7 +1,5 @@
 <template>
-	<v-app-bar
-		color="primary"
-		density="compact">
+	<v-app-bar color="primary" density="compact">
 		<v-app-bar-title>Title</v-app-bar-title>
 
 		<template v-slot:append>

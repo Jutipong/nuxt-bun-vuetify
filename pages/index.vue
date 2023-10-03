@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { state } = useAuthStore();
+</script>
 
 <template>
 	<div>

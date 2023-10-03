@@ -3,6 +3,5 @@
     "semi": true,
     "printWidth": 90,
     "bracketSameLine": true,
-    "useTabs":true,
-    "vueIndentScriptAndStyle":true
+    "useTabs":true
 }

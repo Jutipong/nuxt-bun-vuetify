@@ -1,20 +1,19 @@
 <script lang="ts" setup>
-	definePageMeta({ layout: 'empty' });
-	import { Auth } from '~/types/auth';
+definePageMeta({ layout: 'empty' });
 
-	const authStore = useAuthStore();
+const authStore = useAuthStore();
 
-	onMounted(() => {
-		if (authStore.isLogin()) {
-			authStore.logOut();
-		}
-	});
+onMounted(() => {
+	if (authStore.isLogin()) {
+		authStore.logOut();
+	}
+});
 
-	const user = ref<Auth>({
-		username: 'kminchelle',
-		password: '0lelplR',
-		visible: false,
-	});
+const user = ref<IAuth>({
+	username: 'kminchelle',
+	password: '0lelplR',
+	visible: false,
+});
 </script>
 
 <template>
