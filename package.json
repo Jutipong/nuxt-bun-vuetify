@@ -12,9 +12,11 @@
   "devDependencies": {
     "@invictus.codes/nuxt-vuetify": "latest",
     "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "latest",
     "@pinia/nuxt": "latest",
     "@vue-macros/nuxt": "latest",
     "@vueuse/nuxt": "latest",
-    "nuxt": "^3.7.3"
+    "nuxt": "^3.7.4",
+    "sass": "^1.68.0"
   }
 }
