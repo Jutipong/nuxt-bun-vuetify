@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 		pageTransition: { name: 'page', mode: 'out-in' },
 	},
 	imports: {
-		dirs: ['stores', 'types'],
+		dirs: ['stores'],
 	},
 	vuetify: {
 		vuetifyOptions: {
